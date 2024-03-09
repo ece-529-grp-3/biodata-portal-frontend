@@ -5,6 +5,7 @@ const idtest = document.getElementById("test");
 const table = document.getElementById("table");
 /*student variables*/
 const stdnt = document.getElementById("studentLayout");
+const checkreg = document.getElementById("indexregno")
 let returnedForm = '';
 
 xml.open("GET", "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/");
@@ -45,7 +46,7 @@ function addOneStudent(){
   console.log(`addOne length is ` + returnedForm.length);
   for (let i=0; i<(returnedForm.length); i++){
     for (const key in returnedForm[i]){
-      if (returnedForm[i].reg_number == "2019364052"){
+      if (returnedForm[i].reg_number == checkreg.value){
       console.log(key + ` : ` + returnedForm[i][key]);
       return (i);
       }
