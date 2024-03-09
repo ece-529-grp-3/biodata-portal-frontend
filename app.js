@@ -39,8 +39,8 @@ function addtab(){
 
 function addOneStudent(){
   const returnedForm = JSON.parse(JSON.stringify(xml.response));
-  for (const key in returnedForm[0]){
-    console.log(key + ` : ` + returnedForm[0][key])
+  for (const key in returnedForm){
+    console.log(key + ` : ` + returnedForm[key])
   }
 }
 
