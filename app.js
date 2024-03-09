@@ -62,7 +62,7 @@ document.getElementById("err").innerHTML += `STUDENT DOES NOT EXIST/CAN'T BE FOU
 }
 
 function printOne(){
-  const returnedForm = JSON.parse(JSON.stringify(xml.response));
+  returnedForm = JSON.parse(JSON.stringify(xml.response));
   console.log(xml.response);
   console.log(`printOne length is ` + returnedForm.length);
   i = addOneStudent();
