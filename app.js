@@ -85,6 +85,10 @@ function printOne(){
           }
 }
 
+document.getElementById("stdntbdy").addEventListener("load", (event) => {
+  printOne();
+});
+
 form.addEventListener('submit', async(e) => {
     e.preventDefault();
     console.log("click");
