@@ -22,6 +22,7 @@ xml.onload = () => {
 
 function addtab(){
   console.log("enetered at all?");
+  console.log(xml.response);
   console.log(`length is ` + returnedForm.length);
   for (i=0; i<(returnedForm.length); i++){
     console.log(i + `has printed`);
