@@ -21,6 +21,7 @@ xml.onload = () => {
 
 function addtab(){
   for (i=0; i<(Object.keys(returnedForm).length); i++){
+    console.log(i + `has printed`);
     table.innerHTML += `<tr>
                     <th scope="row">1</th>
                     <td>${returnedForm[i].first_name}</td>
