@@ -10,20 +10,25 @@ xml.responseType = "json";
 xml.onload = () => {
   if (xml.readyState == 4 && xml.status == 200) {
     console.log(xml.response);
-    console.log(JSON.stringify(xml.response[0]));
-    console.log(JSON.stringify(xml.response[0].first_name));
+    const returnedForm = JSON.stringify(xml.response);
+    console.log(returnedForm[0]);
+    console.log(returnedForm[0].first_name);
   } else {
     console.log(`Error: ${xml.status}`);
   }
 };
 
 function addtab(){
+  for (i=0; i<(Object.keys(returnedForm).length); i++){
     table.innerHTML += `<tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
+                    <td>${returnedForm[i].first_name}</td>
+					<td>${returnedForm[i].last_name}</td>
+					<td>${returnedForm[i].date_of_birth}</td>
+          <td>${returnedForm[i].gender}</td>
+          <td>${returnedForm[i].reg_number}</td>
 					</tr>`;
+        }
 }
 
 form.addEventListener('submit', async(e) => {
