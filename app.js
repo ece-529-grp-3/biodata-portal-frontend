@@ -62,6 +62,7 @@ document.getElementById("err").innerHTML += `STUDENT DOES NOT EXIST/CAN'T BE FOU
 }
 
 function printOne(){
+  if (xml.readyState == 4){
   returnedForm = JSON.parse(JSON.stringify(xml.response));
   console.log(xml.response);
   console.log(`printOne length is ` + returnedForm.length);
@@ -81,6 +82,7 @@ function printOne(){
                     <div class="row selrow">
 						<span class="studenttext col-12" >REGNUMBER: ${returnedForm[i].reg_number}</span>
 					</div>`;
+          }
 }
 
 form.addEventListener('submit', async(e) => {
