@@ -64,7 +64,7 @@ function printOne(){
   console.log(xml.response);
   console.log(`printOne length is ` + returnedForm.length);
   i = addOneStudent();
-  stdnt.innerHTML = `<div class="row centerbox col-12 col-sm-4">
+  stdnt.innerHTML = `<div class="row centerbox col-12">
 					<div class="row selrow">
 						<span class="centertext col-12">STUDENT BIODATA</span>
 					</div>
