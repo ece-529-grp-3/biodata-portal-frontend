@@ -37,6 +37,14 @@ function addtab(){
         }
 }
 
+function addOneStudent(){
+  const returnedForm = JSON.parse(JSON.stringify(xml.response));
+  Object.entries(returnedForm).forEach((entry) => {
+  const [key, value] = entry;
+  console.log(`${key}: ${value}`);
+});
+}
+
 form.addEventListener('submit', async(e) => {
     e.preventDefault();
     console.log("click");
