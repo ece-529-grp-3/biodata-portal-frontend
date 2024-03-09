@@ -3,7 +3,7 @@ const form = document.getElementById('regform');
 const xml = new XMLHttpRequest();
 const idtest = document.getElementById("test");
 const table = document.getElementById("table");
-let returnedForm = [];
+let returnedForm = '';
 
 xml.open("GET", "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/");
 xml.send();
