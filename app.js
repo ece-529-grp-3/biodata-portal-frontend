@@ -41,6 +41,8 @@ function addtab(){
 
 function addOneStudent(){
   const returnedForm = JSON.parse(JSON.stringify(xml.response));
+  console.log(xml.response);
+  console.log(`addOne length is ` + returnedForm.length);
   for (let i=0; i<(returnedForm.length); i++){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == "2019364052"){
