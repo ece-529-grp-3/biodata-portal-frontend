@@ -38,7 +38,7 @@ function addtab(){
 }
 
 function addOneStudent(){
-  const returnedForm = JSON.stringify(xml.response);
+  const returnedForm = JSON.parse(xml.response);
   Object.entries(returnedForm).forEach((entry) => {
   const [key, value] = entry;
   console.log(`${key}: ${value}`);
