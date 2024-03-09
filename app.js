@@ -27,7 +27,7 @@ function addtab(){
   for (i=0; i<(returnedForm.length); i++){
     console.log(i + `has printed`);
     table.innerHTML += `<tr>
-                    <th scope="row">1</th>
+                    <th scope="row">${i}</th>
                     <td>${returnedForm[i].first_name}</td>
 					<td>${returnedForm[i].last_name}</td>
 					<td>${returnedForm[i].date_of_birth}</td>
