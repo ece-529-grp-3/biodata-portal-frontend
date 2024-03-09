@@ -20,7 +20,8 @@ xml.onload = () => {
 };
 
 function addtab(){
-  console.log("enetered at all?")
+  console.log("enetered at all?");
+  console.log(returnedForm.length);
   for (i=0; i<(returnedForm.length); i++){
     console.log(i + `has printed`);
     table.innerHTML += `<tr>
