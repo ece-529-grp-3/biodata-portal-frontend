@@ -60,7 +60,7 @@ function addOneStudent(){
 					</div>
                     <div class="row selrow">
 						<span class="studenttext col-12" >REGNUMBER: ${returnedForm[i].reg_number}</span>
-					</div>`
+					</div>`;
       }
       else
       {
