@@ -70,19 +70,19 @@ function printOne(){
 					</div>
 					<div class="row selrow">
           <div class="row selrow">
-						<span class="studenttext col-12">SURNAME: ${returnedForm[i].first_name}</span>
+						<span class="studenttext inria col-12">FIRSTNAME: ${returnedForm[i].first_name}</span>
 					</div>
                     <div class="row selrow">
-						<span class="studenttext col-12" >FIRSTNAME: ${returnedForm[i].last_name}</span>
+						<span class="studenttext inria col-12" >SURNAME: ${returnedForm[i].last_name}</span>
 					</div>
                     <div class="row selrow">
-						<span class="studenttext col-12" >DOB: ${returnedForm[i].date_of_birth}</span>
+						<span class="studenttext inria col-12" >DATE OF BIRTH: ${returnedForm[i].date_of_birth}</span>
 					</div>
                     <div class="row selrow">
-						<span class="studenttext col-12" >PHONENUMBER: ${returnedForm[i].gender}</span>
+						<span class="studenttext inria col-12" >GENDER: ${returnedForm[i].gender}</span>
 					</div>
                     <div class="row selrow">
-						<span class="studenttext col-12" >REGNUMBER: ${returnedForm[i].reg_number}</span>
+						<span class="studenttext inria col-12">REGISTRATION NUMBER: ${returnedForm[i].reg_number}</span>
 					</div>
 					</div>`;
           }
