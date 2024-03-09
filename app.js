@@ -3,6 +3,8 @@ const form = document.getElementById('regform');
 const xml = new XMLHttpRequest();
 const idtest = document.getElementById("test");
 const table = document.getElementById("table");
+/*student variables*/
+const stdnt = document.getElementById("studentLayout");
 let returnedForm = '';
 
 xml.open("GET", "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/");
@@ -44,17 +46,30 @@ function addOneStudent(){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == "2019364052"){
       console.log(key + ` : ` + returnedForm[i][key]);
-      return (i);
+      stdnt.innerHTML += `<div class="row selrow">
+						<span class="studenttext col-12">SURNAME: ${returnedForm[i].first_name}</span>
+					</div>
+                    <div class="row selrow">
+						<span class="studenttext col-12" >FIRSTNAME: ${returnedForm[i].last_name}</span>
+					</div>
+                    <div class="row selrow">
+						<span class="studenttext col-12" >DOB: ${returnedForm[i].date_of_birth}</span>
+					</div>
+                    <div class="row selrow">
+						<span class="studenttext col-12" >PHONENUMBER: ${returnedForm[i].gender}</span>
+					</div>
+                    <div class="row selrow">
+						<span class="studenttext col-12" >REGNUMBER: ${returnedForm[i].reg_number}</span>
+					</div>`
       }
       else
       {
         console.log("not found");
+        document.getElementById("err").innerHTML += `STUDENT DOES NOT EXIST/CAN'T BE FOUND`
       }
     }
   }
 }
-
-  console.log(`index is ` + findIndex());
 }
 
 form.addEventListener('submit', async(e) => {
