@@ -69,7 +69,7 @@ function printOne(){
 						<span class="centertext col-12">STUDENT BIODATA</span>
 					</div>
 					<div class="row selrow">
-          <div class="row selrow">
+          
 						<span class="studenttext col-12">FIRSTNAME: ${returnedForm[i].first_name}</span>
 					</div>
                     <div class="row selrow">
@@ -83,7 +83,7 @@ function printOne(){
 					</div>
                     <div class="row selrow">
 						<span class="studenttext col-12">REGISTRATION NUMBER: ${returnedForm[i].reg_number}</span>
-					</div>
+					
 					</div>`;
           }
 }
