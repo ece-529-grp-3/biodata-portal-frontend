@@ -1,0 +1,73 @@
+.regbox{
+    border-style: solid;
+    border-color: black;
+    border-width: 0.7mm;
+}
+
+.topnav{
+    color: blue;
+    background-color: blue;
+}
+
+.maindiv{
+    padding-bottom: 2rem;
+    justify-content: center;
+}
+
+.takebutton{
+    border-radius: 1rem;
+    color: rgb(236, 236, 236);
+}
+
+.topdiv{
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.selrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selrow a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.centerbox{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(230, 225, 225);
+    border-radius: 2mm;
+    padding-top: 2rem;
+}
+
+.centertext{
+    width: auto;
+    font-family: "Inria Sans", sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.centertext2{
+    width: auto;
+    font-family: "Inria Sans", sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.inria{
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
