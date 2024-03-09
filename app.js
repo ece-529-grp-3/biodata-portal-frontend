@@ -11,7 +11,7 @@ xml.open("GET", "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biod
 xml.send();
 xml.responseType = "json";
 xml.onload = () => {
-  if (xml.readyState == 4 && xml.status == 200) {
+  if (xml.readyState == 4 && document.readyState === "complete" && xml.status == 200) {
     console.log(xml.response);
     const returnedForm = JSON.parse(JSON.stringify(xml.response));
     console.log(returnedForm[0]);
