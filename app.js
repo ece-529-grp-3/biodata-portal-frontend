@@ -28,17 +28,41 @@ form.addEventListener('submit', async(e) => {
     e.preventDefault();
     console.log("click");
     formData = new FormData(e.target);
-    for (var pair of formData.entries()){
-    console.log(pair[0] + ` : ` + pair[1]);
-    }
+    //for (var pair of formData.entries()){
+    //console.log(pair[0] + ` : ` + pair[1]);
+    //}
     /*var object = {};
     formData.forEach(function(value, key){
     object[key] = value;
     });
     var json = JSON.stringify(object);
     console.log(json);*/
-    const response = await fetch("https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/", {
-    method: "POST",
-    body: formData,
-  });
+    try {
+		const formData = new FormData(form);
+    const url = "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/";
+		const responseData = await postFormDataAsJson({ url, formData });
+
+		console.log({ responseData });
+	} catch (error) {
+		console.error(error);
+	}
+
+    async function postFormDataAsJson({ url, formData }) {
+      const plainFormData = Object.fromEntries(formData.entries());
+      const formDataJsonString = JSON.stringify(plainFormData);
+      const fetchOptions = {
+		  method: "POST",
+		  headers: {
+			  "Content-Type": "application/json",
+			  Accept: "application/json",
+		  },
+		  body: formDataJsonString,
+      };
+      const response = await fetch(url, fetchOptions);
+      if (!response.ok) {
+      const errorMessage = await response.text();
+      throw new Error(errorMessage);
+      }
+      return response.json();
+    }
 });
