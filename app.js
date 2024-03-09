@@ -29,7 +29,7 @@ function addtab(){
   console.log(`length is ` + returnedForm.length);
   for (i=0; i<(returnedForm.length); i++){
     console.log(i + `has printed`);
-    table.innerHTML += `<tr>
+    table.innerHTML = `<tr>
                     <th scope="row">${i}</th>
                     <td>${returnedForm[i].first_name}</td>
 					<td>${returnedForm[i].last_name}</td>
@@ -56,7 +56,7 @@ function addOneStudent(){
       }
     }
   }
-document.getElementById("err").innerHTML += `STUDENT DOES NOT EXIST/CAN'T BE FOUND`
+document.getElementById("err").innerHTML = `STUDENT DOES NOT EXIST/CAN'T BE FOUND`
 }
 
 function printOne(){
