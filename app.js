@@ -83,7 +83,7 @@ function printOne(){
 					</div>
                     <div class="row selrow">
 						<span class="studenttext col-12">REGISTRATION NUMBER: ${returnedForm[i].reg_number}</span>
-					
+            </div>
 					</div>`;
           }
 }
