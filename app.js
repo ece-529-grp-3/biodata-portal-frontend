@@ -38,11 +38,10 @@ function addtab(){
 }
 
 function addOneStudent(){
-  const returnedForm = JSON.parse(xml.response);
-  Object.entries(returnedForm).forEach((entry) => {
-  const [key, value] = entry;
-  console.log(`${key}: ${value}`);
-});
+  const returnedForm = JSON.parse(JSON.stringify(xml.response));
+  for (const key in returnedForm[0]){
+    console.log(key + ` : ` + returnedForm[0][key])
+  }
 }
 
 form.addEventListener('submit', async(e) => {
