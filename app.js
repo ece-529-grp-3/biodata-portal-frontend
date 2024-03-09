@@ -27,9 +27,10 @@ function addtab(){
   console.log("enetered at all?");
   console.log(xml.response);
   console.log(`length is ` + returnedForm.length);
+  table.innerHTML = ``;
   for (let j=0; j<(returnedForm.length); j++){
     console.log(j + `has printed`);
-    table.innerHTML = `<tr>
+    table.innerHTML += `<tr>
                     <th scope="row">${j}</th>
                     <td>${returnedForm[j].first_name}</td>
 					<td>${returnedForm[j].last_name}</td>
