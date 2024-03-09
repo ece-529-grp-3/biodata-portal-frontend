@@ -46,7 +46,7 @@
 								<label for="Surname" class="inria">SURNAME</label>
 								<input
 									type="text"
-									name="surname"
+									name="last_name"
 									class="form-control regbox inria"
 									id="surname"
 									placeholder="SURNAME"
@@ -54,10 +54,10 @@
 								/>
 							</div>
 							<div class="mb-3 col-12 col-sm-6">
-								<label for="othername" class="inria">OTHER NAMES</label>
+								<label for="othername" class="inria">FIRST NAME</label>
 								<input
 									type="text"
-									name="othername"
+									name="first_name"
 									class="form-control regbox inria"
 									id="othername"
 									placeholder="OTHERNAME"
@@ -70,7 +70,7 @@
 								<label for="dateofbirth" class="inria">DATE OF BIRTH</label>
 								<input
 									type="date"
-									name="date"
+									name="date_of_birth"
 									class="form-control regbox inria"
 									id="date"
 									placeholder="DAY"
@@ -80,15 +80,11 @@
 						</div>
 						<div class="row selrow">
 							<div class="mb-3 col-12 col-sm-12">
-								<label for="phonenumber" class="inria">PHONE NUMBER</label>
-								<input
-									type="text"
-									name="phonenumber"
-									class="form-control regbox inria"
-									id="phonenumber"
-									placeholder="PHONE NUMBER"
-									required
-								/>
+								<label for="phonenumber" class="inria">GENDER</label>
+								<select name="gender" class="form-control form-control-sm">
+									<option value="Female">Female</option>
+									<option value="Male">Male</option>
+								</select>
 							</div>
 						</div>
 						<div class="row selrow">
@@ -102,29 +98,6 @@
 									placeholder="REGISTRATION NUMBER"
 									required
 								/>
-							</div>
-						</div>
-						<div class="row selrow">
-							<div class="mb-3 col-12 col-sm-12">
-								<label class="col-12 mb-2 inria" for="Gender">GENDER</label>
-								<input
-									type="radio"
-									id="Radio1"
-									name="Male"
-									class="custom-control-input"
-								/>
-								<label class="custom-control-label me-3 inria" for="Radio1"
-									>Male</label
-								>
-								<input
-									type="radio"
-									id="Radio2"
-									name="Female"
-									class="custom-control-input"
-								/>
-								<label class="custom-control-label inria" for="Radio2"
-									>Female</label
-								>
 							</div>
 						</div>
 						<div class="row selrow">
