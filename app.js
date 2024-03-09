@@ -47,9 +47,6 @@ function addOneStudent(){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == "2019364052"){
       console.log(key + ` : ` + returnedForm[i][key]);
-      if (window.location.href != "https://biodata-portal-frontend.vercel.app/student.html"){
-        window.location.href = "student.html";
-      }
       return (i);
       }
       else
@@ -67,7 +64,12 @@ function printOne(){
   console.log(xml.response);
   console.log(`printOne length is ` + returnedForm.length);
   i = addOneStudent();
-  stdnt.innerHTML += `<div class="row selrow">
+  stdnt.innerHTML += `<div class="row centerbox col-12 col-sm-4">
+					<div class="row selrow">
+						<span class="centertext col-12">STUDENT BIODATA</span>
+					</div>
+					<div class="row selrow">
+          <div class="row selrow">
 						<span class="studenttext col-12">SURNAME: ${returnedForm[i].first_name}</span>
 					</div>
                     <div class="row selrow">
@@ -81,6 +83,7 @@ function printOne(){
 					</div>
                     <div class="row selrow">
 						<span class="studenttext col-12" >REGNUMBER: ${returnedForm[i].reg_number}</span>
+					</div>
 					</div>`;
           }
 }
