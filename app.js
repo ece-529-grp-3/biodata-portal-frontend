@@ -42,11 +42,12 @@ function addOneStudent(){
   for (i=0; i<(returnedForm.length); i++){
     for (const key in returnedForm[i]){
       if (returnedForm[i][reg_number] == "2256065541"){
-      console.log(key + ` : ` + returnedForm[key])
+      console.log(key + ` : ` + returnedForm[i][key]);
+      break;
       }
       else
       {
-        console.log("not found")
+        console.log("not found");
       }
     }
   }
