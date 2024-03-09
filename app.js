@@ -45,7 +45,7 @@ function addOneStudent(){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == "2019364052"){
       console.log(key + ` : ` + returnedForm[i][key]);
-      window.location = "student.html"
+      /*window.location = "student.html"*/
       stdnt.innerHTML += `<div class="row selrow">
 						<span class="studenttext col-12">SURNAME: ${returnedForm[i].first_name}</span>
 					</div>
