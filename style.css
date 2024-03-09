@@ -79,4 +79,8 @@
 }
 
 .studenttext{
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 1mm;
 }
