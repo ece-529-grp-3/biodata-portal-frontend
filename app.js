@@ -10,6 +10,7 @@ xml.responseType = "json";
 xml.onload = () => {
   if (xml.readyState == 4 && xml.status == 200) {
     console.log(xml.response);
+    console.log(xml.response[0]);
   } else {
     console.log(`Error: ${xml.status}`);
   }
