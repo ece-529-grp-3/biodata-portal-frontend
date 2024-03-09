@@ -10,7 +10,7 @@ xml.responseType = "json";
 xml.onload = () => {
   if (xml.readyState == 4 && xml.status == 200) {
     console.log(xml.response);
-    const returnedForm = JSON.stringify(xml.response);
+    let returnedForm = [JSON.stringify(xml.response)];
     console.log(returnedForm[0]);
     console.log(returnedForm[0].first_name);
   } else {
