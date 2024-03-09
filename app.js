@@ -27,15 +27,15 @@ function addtab(){
   console.log("enetered at all?");
   console.log(xml.response);
   console.log(`length is ` + returnedForm.length);
-  for (i=0; i<(returnedForm.length); i++){
-    console.log(i + `has printed`);
+  for (let j=0; j<(returnedForm.length); j++){
+    console.log(j + `has printed`);
     table.innerHTML = `<tr>
-                    <th scope="row">${i}</th>
-                    <td>${returnedForm[i].first_name}</td>
-					<td>${returnedForm[i].last_name}</td>
-					<td>${returnedForm[i].date_of_birth}</td>
-          <td>${returnedForm[i].gender}</td>
-          <td>${returnedForm[i].reg_number}</td>
+                    <th scope="row">${j}</th>
+                    <td>${returnedForm[j].first_name}</td>
+					<td>${returnedForm[j].last_name}</td>
+					<td>${returnedForm[j].date_of_birth}</td>
+          <td>${returnedForm[j].gender}</td>
+          <td>${returnedForm[j].reg_number}</td>
 					</tr>`;
         }
 }
