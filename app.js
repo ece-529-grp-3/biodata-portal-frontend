@@ -47,7 +47,7 @@ function addOneStudent(){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == "2019364052"){
       console.log(key + ` : ` + returnedForm[i][key]);
-      if (window.location.href != "student.html"){
+      if (window.location.href != "https://biodata-portal-frontend.vercel.app/student.html"){
         window.location.href = "student.html";
       }
       return (i);
