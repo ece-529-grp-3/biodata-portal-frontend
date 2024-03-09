@@ -39,8 +39,16 @@ function addtab(){
 
 function addOneStudent(){
   const returnedForm = JSON.parse(JSON.stringify(xml.response));
-  for (const key in returnedForm){
-    console.log(key + ` : ` + returnedForm[key])
+  for (i=0; i<(returnedForm.length); i++){
+    for (const key in returnedForm[i]){
+      if (returnedForm[i][reg_number] == "2256065541"){
+      console.log(key + ` : ` + returnedForm[key])
+      }
+      else
+      {
+        console.log("not found")
+      }
+    }
   }
 }
 
