@@ -39,11 +39,12 @@ function addtab(){
 
 function addOneStudent(){
   const returnedForm = JSON.parse(JSON.stringify(xml.response));
+  function findIndex(){
   for (i=0; i<(returnedForm.length); i++){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == "2019364052"){
       console.log(key + ` : ` + returnedForm[i][key]);
-      break;
+      return (i);
       }
       else
       {
@@ -51,6 +52,9 @@ function addOneStudent(){
       }
     }
   }
+}
+
+  console.log(`index is ` + findIndex());
 }
 
 form.addEventListener('submit', async(e) => {
