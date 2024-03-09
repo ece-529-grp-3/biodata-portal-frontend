@@ -45,7 +45,23 @@ function addOneStudent(){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == "2019364052"){
       console.log(key + ` : ` + returnedForm[i][key]);
-      stdnt.innerHTML += `<div class="row selrow">
+      if (window.location.href != "student.html"){
+        window.location.href = "student.html";
+      }
+      return (i);
+      }
+      else
+      {
+        console.log("not found");
+      }
+    }
+  }
+document.getElementById("err").innerHTML += `STUDENT DOES NOT EXIST/CAN'T BE FOUND`
+}
+
+function printOne(){
+  i = addOneStudent();
+  stdnt.innerHTML += `<div class="row selrow">
 						<span class="studenttext col-12">SURNAME: ${returnedForm[i].first_name}</span>
 					</div>
                     <div class="row selrow">
@@ -60,16 +76,6 @@ function addOneStudent(){
                     <div class="row selrow">
 						<span class="studenttext col-12" >REGNUMBER: ${returnedForm[i].reg_number}</span>
 					</div>`;
-        return 0;
-      }
-      else
-      {
-        console.log("not found");
-      }
-
-    }
-  }
-document.getElementById("err").innerHTML += `STUDENT DOES NOT EXIST/CAN'T BE FOUND`
 }
 
 form.addEventListener('submit', async(e) => {
