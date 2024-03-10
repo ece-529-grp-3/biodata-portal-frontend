@@ -109,7 +109,8 @@ form.addEventListener('submit', async(e) => {
     const url = "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/";
 		const responseData = await postFormDataAsJson({ url, formData });
 		console.log({ responseData });
-    console.log("sentform");
+    document.getElementById('loading').innerHTML = `UPLOADED!`
+    window.location.reload();
 	} catch (error) {
 		console.error(error);
 	}
