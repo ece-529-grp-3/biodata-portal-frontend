@@ -45,6 +45,7 @@ function addOneStudent(){
   const returnedForm = JSON.parse(JSON.stringify(xml.response));
   console.log(xml.response);
   console.log(`addOne length is ` + returnedForm.length);
+  document.getElementById("err").innerHTML = ``
   for (let i=0; i<(returnedForm.length); i++){
     for (const key in returnedForm[i]){
       if (returnedForm[i].reg_number == checkreg.value){
@@ -94,15 +95,7 @@ form.addEventListener('submit', async(e) => {
     e.preventDefault();
     console.log("click");
     formData = new FormData(e.target);
-    //for (var pair of formData.entries()){
-    //console.log(pair[0] + ` : ` + pair[1]);
-    //}
-    /*var object = {};
-    formData.forEach(function(value, key){
-    object[key] = value;
-    });
-    var json = JSON.stringify(object);
-    console.log(json);*/
+    
     try {
     document.getElementById('submit').style.display = 'none';
 		const formData = new FormData(form);
@@ -110,7 +103,7 @@ form.addEventListener('submit', async(e) => {
 		const responseData = await postFormDataAsJson({ url, formData });
 		console.log({ responseData });
     document.getElementById('loading').innerHTML = `UPLOADED!`
-    window.location.reload();
+    window.location.href = "index.html";
 	} catch (error) {
 		console.error(error);
 	}
