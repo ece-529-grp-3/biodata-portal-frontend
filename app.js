@@ -92,16 +92,16 @@ function printOne(){
           }
 }
 
-document.getElementById("indexregno").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementsByClassName("indexsubbtn").click();
-  }
-});
+// document.getElementById("indexregno").addEventListener("keypress", function(event) {
+//   if (event.key === "Enter") {
+//     event.preventDefault();
+//     document.getElementsByClassName("indexsubbtn").click();
+//   }
+// });
 
 form.addEventListener('submit', async(e) => {
     console.log("entered am i right");
-    // e.preventDefault();
+    e.preventDefault();
     // e.stopImmediatePropagation();
     console.log("click");
     formData = new FormData(e.target);
@@ -123,7 +123,7 @@ form.addEventListener('submit', async(e) => {
     //   {
     //     console.log("not found");
     //   }}}
-    document.getElementById('submit').style.display = 'none';
+    // document.getElementById('submit').style.display = 'none';
 		const formData = new FormData(form);
     const url = "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/";
 		const responseData = await postFormDataAsJson({ url, formData });
