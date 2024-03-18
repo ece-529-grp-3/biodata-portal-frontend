@@ -103,6 +103,8 @@ form.addEventListener('submit', async(e) => {
     e.preventDefault();
     console.log("click");
     formData = new FormData(e.target);
+
+    try {
     //check if Reg.No already exists
     const returnedForm = JSON.parse(JSON.stringify(xml.response));
     console.log(returnedForm);
@@ -112,14 +114,13 @@ form.addEventListener('submit', async(e) => {
     if (returnedForm[k].reg_number == regregnumber.value){
       console.log(key + ` : ` + returnedForm[k][key]);
       document.getElementById("err").innerHTML = `THIS REG NUMBER ALREADY EXISTS`
+      throw "REGNO overlap"
       return (k);
       }
       else
       {
         console.log("not found");
       }}}
-
-    try {
     document.getElementById('submit').style.display = 'none';
 		const formData = new FormData(form);
     const url = "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/";
