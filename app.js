@@ -6,6 +6,7 @@ const table = document.getElementById("table");
 /*student variables*/
 const stdnt = document.getElementById("studentLayout");
 const checkreg = document.getElementById("indexregno")
+const regregnumber = document.getElementById("regnumber")
 let returnedForm = '';
 
 xml.open("GET", "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/");
@@ -102,7 +103,20 @@ form.addEventListener('submit', async(e) => {
     e.preventDefault();
     console.log("click");
     formData = new FormData(e.target);
-    
+    //check if Reg.No already exists
+    const returnedForm = JSON.parse(JSON.stringify(xml.response));
+    document.getElementById("err").innerHTML = ``
+    for (let i=0; i<(returnedForm.length); i++){
+    for (const key in returnedForm[i]){
+      if (returnedForm[i].reg_number == regregnumber.value){
+      console.log(key + ` : ` + returnedForm[i][key]);
+      document.getElementById("err").innerHTML = `THIS REG NUMBER ALREADY EXISTS`
+      return (i);
+      }
+      else
+      {
+        console.log("not found");
+      }}}
     try {
     document.getElementById('submit').style.display = 'none';
 		const formData = new FormData(form);
