@@ -105,6 +105,7 @@ form.addEventListener('submit', async(e) => {
     formData = new FormData(e.target);
     //check if Reg.No already exists
     const returnedForm = JSON.parse(JSON.stringify(xml.response));
+    console.log(returnedForm);
     document.getElementById("err").innerHTML = ``
     for (let k=0; k<(returnedForm.length); k++){
     for (const key in returnedForm[k]){
