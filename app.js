@@ -100,7 +100,7 @@ document.getElementById("indexregno").addEventListener("keypress", function(even
 });
 
 form.addEventListener('submit', async(e) => {
-    console.log("entered am i right")
+    console.log("entered am i right");
     e.preventDefault();
     e.stopImmediatePropagation();
     console.log("click");
@@ -128,9 +128,10 @@ form.addEventListener('submit', async(e) => {
     const url = "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/";
 		const responseData = await postFormDataAsJson({ url, formData });
 		console.log({ responseData });
-    document.getElementById('loading').innerHTML = `UPLOADED!`
+    document.getElementById('loading').innerHTML = `UPLOADED!`;
     window.location.href = "index.html";
 	} catch (error) {
+    console.log("error catch entered");
 		console.error(error);
 	}
 
