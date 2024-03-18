@@ -100,6 +100,7 @@ document.getElementById("indexregno").addEventListener("keypress", function(even
 });
 
 form.addEventListener('submit', async(e) => {
+    console.log("entered am i right")
     e.preventDefault();
     e.stopImmediatePropagation();
     console.log("click");
