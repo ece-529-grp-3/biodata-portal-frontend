@@ -105,22 +105,22 @@ form.addEventListener('submit', async(e) => {
     formData = new FormData(e.target);
 
     try {
-    //check if Reg.No already exists
-    const returnedForm = JSON.parse(JSON.stringify(xml.response));
-    console.log(returnedForm);
-    document.getElementById("err").innerHTML = ``
-    for (let k=0; k<(returnedForm.length); k++){
-    for (const key in returnedForm[k]){
-    if (returnedForm[k].reg_number == regregnumber.value){
-      console.log(key + ` : ` + returnedForm[k][key]);
-      document.getElementById("err").innerHTML = `THIS REG NUMBER ALREADY EXISTS`
-      throw "REGNO overlap"
-      return (k);
-      }
-      else
-      {
-        console.log("not found");
-      }}}
+    // check if Reg.No already exists
+    // const returnedForm = JSON.parse(JSON.stringify(xml.response));
+    // console.log(returnedForm);
+    // document.getElementById("err").innerHTML = ``
+    // for (let k=0; k<(returnedForm.length); k++){
+    // for (const key in returnedForm[k]){
+    // if (returnedForm[k].reg_number == regregnumber.value){
+    //   console.log(key + ` : ` + returnedForm[k][key]);
+    //   document.getElementById("err").innerHTML = `THIS REG NUMBER ALREADY EXISTS`
+    //   throw "REGNO overlap"
+    //   return (k);
+    //   }
+    //   else
+    //   {
+    //     console.log("not found");
+    //   }}}
     document.getElementById('submit').style.display = 'none';
 		const formData = new FormData(form);
     const url = "https://student-biodata-api-e089235e13e4.herokuapp.com/api/biodata/";
