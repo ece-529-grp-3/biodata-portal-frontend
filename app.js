@@ -106,17 +106,18 @@ form.addEventListener('submit', async(e) => {
     //check if Reg.No already exists
     const returnedForm = JSON.parse(JSON.stringify(xml.response));
     document.getElementById("err").innerHTML = ``
-    for (let i=0; i<(returnedForm.length); i++){
-    for (const key in returnedForm[i]){
-      if (returnedForm[i].reg_number == regregnumber.value){
-      console.log(key + ` : ` + returnedForm[i][key]);
+    for (let k=0; k<(returnedForm.length); k++){
+    for (const key in returnedForm[k]){
+    if (returnedForm[k].reg_number == regregnumber.value){
+      console.log(key + ` : ` + returnedForm[k][key]);
       document.getElementById("err").innerHTML = `THIS REG NUMBER ALREADY EXISTS`
-      return (i);
+      return (k);
       }
       else
       {
         console.log("not found");
       }}}
+
     try {
     document.getElementById('submit').style.display = 'none';
 		const formData = new FormData(form);
