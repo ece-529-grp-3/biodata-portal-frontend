@@ -95,7 +95,7 @@ function printOne(){
 document.getElementById("indexregno").addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    document.getElementById("submit").click();
+    document.getElementsByClassName("indexsubbtn").click();
   }
 });
 
