@@ -101,6 +101,7 @@ document.getElementById("indexregno").addEventListener("keypress", function(even
 
 form.addEventListener('submit', async(e) => {
     e.preventDefault();
+    e.stopImmediatePropagation();
     console.log("click");
     formData = new FormData(e.target);
 
