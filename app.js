@@ -147,7 +147,8 @@ form.addEventListener('submit', async(e) => {
         "Content-Type": "multipart/form-data",
         Accept: "application/json, *.*",
 		  },
-		  body: formDataJsonString,
+		  //body: formDataJsonString,
+      body: formData,
       };
       const response = await fetch(url, fetchOptions);
       if (!response.ok) {
