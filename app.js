@@ -138,14 +138,14 @@ form.addEventListener('submit', async(e) => {
 	}
 
     async function postFormDataAsJson({ url, formData }) {
-      const plainFormData = Object.fromEntries(formData.entries());
-      const formDataJsonString = JSON.stringify(plainFormData);
+      //const plainFormData = Object.fromEntries(formData.entries());
+      //const formDataJsonString = JSON.stringify(plainFormData);
       const fetchOptions = {
 		  method: "POST",
 		  headers: {
 			  //"Content-Type": "application/json",
-        //"Content-Type": "multipart/form-data",
-        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json, *.*",
 		  },
 		  body: formDataJsonString,
       };
