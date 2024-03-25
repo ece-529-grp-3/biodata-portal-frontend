@@ -73,7 +73,7 @@ function printOne(){
 						<span class="centertext col-12">STUDENT BIODATA</span>
 					</div>
           <div class="row selrow">
-						<img src="${returnedForm[i].profile_picture}" alt="" srcset="" class="studentimg">
+						<img src="${returnedForm[i].profile_picture}" alt="" srcset="" class="studentimg col-12">
             </div>
 					<div class="row selrow">
           
