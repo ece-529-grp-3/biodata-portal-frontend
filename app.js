@@ -143,10 +143,8 @@ form.addEventListener('submit', async(e) => {
       const fetchOptions = {
 		  method: "POST",
 		  headers: {
-			  //"Content-Type": "application/json",
-        "Content-Type": "multipart/form-data",
-        //Accept: "application/json",
-        Accept: "multipart/form-data",
+			  "Content-Type": "application/json",
+        Accept: "application/json",
 		  },
 		  //body: formDataJsonString,
       body: formData,
