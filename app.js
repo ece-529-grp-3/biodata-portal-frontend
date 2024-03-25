@@ -144,7 +144,7 @@ form.addEventListener('submit', async(e) => {
 		  method: "POST",
 		  headers: {
 			  //"Content-Type": "application/json",
-        "Content-Type": "multipart/form-data",
+        //"Content-Type": "multipart/form-data",
         Accept: "application/json",
 		  },
 		  body: formDataJsonString,
