@@ -85,6 +85,11 @@
     padding: 1mm;
 }
 
+.studentimg{
+    width: 200px;
+    width: 200px;
+}
+
 #loading {
     display: flex;
     justify-content: center;

@@ -72,6 +72,9 @@ function printOne(){
 					<div class="row selrow">
 						<span class="centertext col-12">STUDENT BIODATA</span>
 					</div>
+          <div class="row selrow">
+						<img src="${returnedForm[i].profile_picture}" alt="" srcset="" class="studentimg">
+            </div>
 					<div class="row selrow">
           
 						<span class="studenttext col-12">FIRSTNAME: ${returnedForm[i].first_name}</span>
@@ -100,7 +103,6 @@ function printOne(){
 // });
 
 form.addEventListener('submit', async(e) => {
-    console.log("entered am i right");
     e.preventDefault();
     // e.stopImmediatePropagation();
     console.log("click");
